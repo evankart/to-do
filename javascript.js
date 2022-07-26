@@ -19,3 +19,9 @@ function removeFunction() {
   const containerElement = removeItem.parentNode;
   containerElement.removeChild(removeItem);
 }
+
+// TO DO: Add an 'x' next to each item on the listf that can remove that specific item.
+
+// TO DO: Drag to reorder list items.
+
+// TO DO: Auto put focus on the text field, allow to submit by just hiting enter and keep focus in the text field so you can keep adding items.
