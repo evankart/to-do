@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!-- lang="en" sets the language to english (for screen readers)-->
+<html lang="en">
+  <head>
+    <!-- tells the browser that the width of the screen should be considered the 'full width' of the page. 
+    For mobile devices and responsive design-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!--Specifies the character encoding for the HTML document-->
+    <meta charset="UTF-8" />
+
+    <!--Name that appears on the tab for the website-->
+    <title>Web Template</title>
+
+    <!-- links to normalize.css to reset browser defaults. Place this above main stylesheet so new
+    rules override it-->
+    <link rel="stylesheet" href="normalize.css" />
+
+    <!-- links to main stylesheet-->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- links to a google font-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800"
+    />
+  </head>
+
+  <body>
+    <section class="to-do">
+      <input type="text" id="new-item" />
+      <button id="btn">Add to List</button>
+
+      <ul id="to-do-list">
+        <li class="list-item">Fix the car</li>
+        <li class="list-item">Go for a run</li>
+      </ul>
+
+      <button id="remove-item">Remove first item</button>
+    </section>
+    <script src="javascript.js"></script>
+  </body>
+</html>
