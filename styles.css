@@ -3,6 +3,38 @@
   /* border-box box sizing sets it up so that the box size is calculated by including
   the content, padding, and border in the pixel size. The margin is not included */
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  line-height: 1.8;
+  font-size: ;
+}
+
+h1 {
+  text-align: center;
+}
+
+.close {
+  margin-left: auto;
+  float: right;
+}
+
+.to-do {
+  margin-top: 1%;
+}
+
+.to-do li {
+  margin: 10px;
+}
+
+#remove-item,
+#btn {
+  background-color: rgb(59, 126, 186);
+  border-radius: 10px;
+  line-height: 1.6;
 }
 
 /* .wrapper styles affect all visible content on the web page */
