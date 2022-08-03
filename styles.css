@@ -10,16 +10,22 @@ body {
   display: flex;
   justify-content: center;
   line-height: 1.8;
-  font-size: ;
-}
-
-h1 {
-  text-align: center;
+  font-size: 1.3rem;
 }
 
 .close {
   margin-left: auto;
   float: right;
+  background-color: aliceblue;
+  padding: 0 0.5em 0 0.5em;
+}
+
+.close:hover {
+  background-color: antiquewhite;
+}
+
+h1 {
+  text-align: center;
 }
 
 .to-do {
