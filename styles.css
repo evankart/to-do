@@ -26,6 +26,10 @@ body {
 
 h1 {
   text-align: center;
+  color: bisque;
+  font-size: 3em;
+  font-weight: 400;
+  margin-bottom: 0;
 }
 
 .to-do {
@@ -41,6 +45,20 @@ h1 {
   background-color: rgb(59, 126, 186);
   border-radius: 10px;
   line-height: 1.6;
+}
+
+#remove-item:hover,
+#btn:hover {
+  background-color: rgb(138, 169, 196);
+}
+
+#remove-item:active,
+#btn:active {
+  background-color: rgb(53, 116, 170);
+}
+
+#new-item {
+  background-color: rgb(238, 238, 227);
 }
 
 /* .wrapper styles affect all visible content on the web page */
