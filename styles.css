@@ -13,11 +13,15 @@ body {
   font-size: 1.3rem;
 }
 
-.close {
+/* .close {
   margin-left: auto;
   float: right;
   background-color: aliceblue;
   padding: 0 0.5em 0 0.5em;
+} */
+
+.close {
+  float: right;
 }
 
 .close:hover {
