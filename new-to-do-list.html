@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!-- lang="en" sets the language to english (for screen readers)-->
+<html lang="en">
+  <head>
+    <!-- tells the browser that the width of the screen should be considered the 'full width' of the page. 
+    For mobile devices and responsive design-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!--Specifies the character encoding for the HTML document-->
+    <meta charset="UTF-8" />
+
+    <!--Name that appears on the tab for the website-->
+    <title>New To Do</title>
+
+    <!-- links to normalize.css to reset browser defaults. Place this above main stylesheet so new
+    rules override it-->
+    <link rel="stylesheet" href="normalize.css" />
+
+    <!-- links to main stylesheet-->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- links to a google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <section class="to-do">
+      <h1 class="">To Do</h1>
+      <input type="text" id="new-item" />
+      <button id="btn">Add to List</button>
+
+      <ul id="to-do-list">
+      </ul>
+
+      <button id="remove-item">Remove first item</button>
+    </section>
+    <script src="new-to-do.js"></script>
+  </body>
+</html>
