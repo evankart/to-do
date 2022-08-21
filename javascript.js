@@ -1,47 +1,72 @@
-// ADD ITEMS TO LIST //
-const addToList = document.getElementById("btn");
-addToList.addEventListener("click", myFunction); // when the button is clicked, myFunction runs
+// COMPLETE: Create an array to hold all the items on the list
+let listArray = ["apples", "bananas", "hot dogs"];
+const listHTML = document.getElementById("to-do-list");
 
-function myFunction() {
-  const node = document.createElement("li"); // creates a new list node
-  const textnode = document.getElementById("new-item").value; // creates a new text node with the value from the input field
-  node.innerHTML = "<li>" + textnode + "</li>"; // places the input field value into <li> tags and places it in the newly created node
-  document.getElementById("to-do-list").appendChild(node); // appends the new node to the "to-do-list" element (adds an item to the unordered list)
-  document.getElementById("new-item").value = ""; // returns the input value to "" so a new item can be added
+for (let i = 0; i < listArray.length; i++) {
+  console.log("<li>" + listArray[i] + "</li>");
+  let li = document.createElement("li");
+  li.appendChild(document.createTextNode(listArray[i]));
 
   // TO DO: Add a close button to each element added to the list
   let span = document.createElement("span"); // creates a new span element
-  let txt = document.createTextNode("  X"); // creates a new text node with the 'x' character
+  let txt = document.createTextNode("X"); // creates a new text node with the 'x' character
   span.className = "close"; // gives the x a class of 'close'
   span.appendChild(txt); // makes '  X' the text child of the span element
-  document.getElementById("to-do-list").appendChild(span); // appends the new span element to the relevant item in the list
+  li.appendChild(span); // appends the new span element to the relevant item in the list
+  listHTML.appendChild(li);
 }
 
-// REMOVE FIRST ITEM FROM LIST //
-const removeItem = document.getElementById("remove-item");
-removeItem.addEventListener("click", removeFunction); // when the button is clicked, removeFunction runs
+//------------------------------------------------------------
+document.querySelector("input").addEventListener("keydown", function (event) {
+  if (event.keyCode === 13) {
+    addToList(); // Adds the item to the list when the enter key is pressed
+  }
+});
 
-function removeFunction() {
-  const removeItem = document.getElementsByTagName("li")[0];
-  const containerElement = removeItem.parentNode;
-  containerElement.removeChild(removeItem);
-}
+//COMPLETE: when you click 'add to list', the value is added to the array
+const addBtn = document.getElementById("btn");
+addBtn.addEventListener("click", addToList); // when the button is clicked, addToList function runs
+function addToList() {
+  console.log(document.getElementById("new-item").value);
+  newItem = document.getElementById("new-item").value;
+  listArray.push(newItem);
+  console.log(listArray);
 
-// Add an 'x' next to each item on the list
-let myToDoList = document.getElementsByTagName("li"); // returns an array of all the items in the list
-let i;
-for (let i = 0; i < myToDoList.length; i++) {
-  // loops over all the items in the list
+  //TO DO: after the new value is added to the array, the list is refreshed
+  let li = document.createElement("li");
+  li.appendChild(document.createTextNode(newItem));
   let span = document.createElement("span"); // creates a new span element
-  let txt = document.createTextNode("  X"); // creates a new text node with the 'x' character
+  let txt = document.createTextNode("X"); // creates a new text node with the 'x' character
   span.className = "close"; // gives the x a class of 'close'
   span.appendChild(txt); // makes '  X' the text child of the span element
-  myToDoList[i].appendChild(span); // appends the new span element to the relevant item in the list
+  li.appendChild(span); // appends the new span element to the relevant item in the list;
+  listHTML.appendChild(li);
+
+  document.getElementById("new-item").value = "";
+
+  //TO DO: Add event handlers that remove the relevant list item when the delete button is pressed.
+  // When you click on the X the item next to it is removed
+  let spanTag = document.getElementsByClassName("close");
+  for (i = 0; i < spanTag.length; i++)
+    spanTag[i].onclick = function () {
+      this.parentNode.remove(this);
+    };
 }
 
+//TO DO: Add event handlers that remove the relevant list item when the delete button is pressed.
 // When you click on the X the item next to it is removed
 let spanTag = document.getElementsByClassName("close");
 for (i = 0; i < spanTag.length; i++)
   spanTag[i].onclick = function () {
     this.parentNode.remove(this);
   };
+
+//TO DO: Button to clear all items from the list
+const clear = document.getElementById("remove-item");
+clear.onclick = function () {
+  listHTML.innerHTML = "";
+};
+
+//TO DO: Refactor the code, make it easier for me to understand
+
+//TO DO: Drag and Drop Items?
