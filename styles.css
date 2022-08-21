@@ -60,8 +60,18 @@ h1 {
   background-color: rgb(53, 116, 170);
 }
 
+.inputs {
+  display: flex;
+  align-items: center;
+}
+
 #new-item {
   background-color: rgb(238, 238, 227);
+  margin: 0 10px;
+  border-radius: 10px;
+  height: 1.4em;
+  flex-basis: 10px;
+  flex-grow: 1;
 }
 
 /* .wrapper styles affect all visible content on the web page */
@@ -99,6 +109,11 @@ footer {
 
 .red-border {
   border-color: rgb(255, 145, 0);
+}
+
+.to-do {
+  width: 90vw;
+  max-width: 800px;
 }
 
 /* Common Media Query Breakpoints: 
