@@ -1,3 +1,5 @@
+/* #TO DO: Start with empty list and prompt to add items */
+
 /* #TO DO: Add transition effects when adding/removing list items (fade or slide in) */
 
 body {
@@ -8,7 +10,7 @@ body {
   font-family: "Dosis", sans-serif;
   font-weight: 400;
   box-sizing: border-box; /* box size includes content, padding, and border */
-  background-color: rgb(255, 255, 253);
+  background-color: rgb(255, 248, 238);
 }
 
 ::-webkit-scrollbar {
@@ -55,6 +57,7 @@ h1 {
   line-height: 1.6;
   color: rgb(252, 248, 242);
   font-weight: 600;
+  font-size: 0.9em;
 }
 
 #remove-item:hover,
@@ -74,11 +77,16 @@ h1 {
 
 #new-item {
   background-color: rgb(238, 238, 227);
-  margin: 0 10px;
+  margin-right: 5px;
   border-radius: 10px;
   height: 1.4em;
-  flex-basis: 10px;
   flex-grow: 1;
+  min-width: 10px;
+}
+
+#btn {
+  flex-basis: 100px;
+  width: 100px;
 }
 
 /* .wrapper styles affect all visible content on the web page */
