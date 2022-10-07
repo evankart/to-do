@@ -39,7 +39,7 @@ function addToList() {
     span.className = "close"; // gives the x a class of 'close'
     span.appendChild(txt); // makes '  X' the text child of the span element
     li.appendChild(span); // appends the new span element to the relevant item in the list;
-    listHTML.appendChild(li);
+    listHTML.prepend(li);
 
     document.getElementById("new-item").value = "";
 
