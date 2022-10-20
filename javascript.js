@@ -1,3 +1,4 @@
+"use strict";
 // COMPLETE: Create an array to hold all the items on the list
 let listArray = ["apples", "bananas", "hot dogs"];
 const listHTML = document.getElementById("to-do-list");
@@ -27,7 +28,7 @@ document.querySelector("input").addEventListener("keydown", function (event) {
 const addBtn = document.getElementById("btn");
 addBtn.addEventListener("click", addToList); // when the button is clicked, addToList function runs
 function addToList() {
-  newItem = document.getElementById("new-item").value;
+  let newItem = document.getElementById("new-item").value;
   if (newItem != "") {
     listArray.push(newItem);
 
@@ -46,7 +47,7 @@ function addToList() {
     //TO DO: Add event handlers that remove the relevant list item when the delete button is pressed.
     // When you click on the X the item next to it is removed
     let spanTag = document.getElementsByClassName("close");
-    for (i = 0; i < spanTag.length; i++)
+    for (let i = 0; i < spanTag.length; i++)
       spanTag[i].onclick = function () {
         this.parentNode.remove(this);
       };
@@ -61,7 +62,7 @@ function addToList() {
 //TO DO: Add event handlers that remove the relevant list item when the delete button is pressed.
 // When you click on the X the item next to it is removed
 let spanTag = document.getElementsByClassName("close");
-for (i = 0; i < spanTag.length; i++)
+for (let i = 0; i < spanTag.length; i++)
   spanTag[i].onclick = function () {
     this.parentNode.remove(this);
   };
